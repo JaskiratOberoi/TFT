@@ -133,7 +133,7 @@ body {
         right: 0;
         justify-content: center;
         .lthumb {
-          height: 100%;
+          height: auto;
           width: fit-content;
           display: flex;
           flex-direction: column;
@@ -149,7 +149,7 @@ body {
           }
         }
         .hero-image {
-          width: 35%;
+          width: auto;
           height: 100%;
           display: flex;
           justify-content: center;
@@ -161,7 +161,7 @@ body {
           }
         }
         .rthumb {
-          height: 100%;
+          height: auto;
           width: fit-content;
           display: flex;
           flex-direction: column;
@@ -170,7 +170,7 @@ body {
           .thumbnail {
             padding: 1rem;
             img {
-              width: 275px;
+              max-width: 275px;
               border-radius: 10px;
               box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
             }

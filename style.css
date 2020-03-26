@@ -136,7 +136,7 @@ body main .hero .images {
 }
 
 body main .hero .images .lthumb {
-  height: 100%;
+  height: auto;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -155,7 +155,7 @@ body main .hero .images .lthumb .thumbnail img {
 }
 
 body main .hero .images .hero-image {
-  width: 35%;
+  width: auto;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -169,7 +169,7 @@ body main .hero .images .hero-image img {
 }
 
 body main .hero .images .rthumb {
-  height: 100%;
+  height: auto;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -182,7 +182,7 @@ body main .hero .images .rthumb .thumbnail {
 }
 
 body main .hero .images .rthumb .thumbnail img {
-  width: 275px;
+  max-width: 275px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
