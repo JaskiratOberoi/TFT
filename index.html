@@ -168,5 +168,16 @@
       </div>
       <div class="foot">Jane Doe Corp © 2020</div>
     </footer>
+
+    <script>
+      //Script to remove 000webhost banner
+      $(document).ready(function() {
+        $("body")
+          .find(
+            'img[src$="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]'
+          )
+          .remove();
+      });
+    </script>
   </body>
 </html>
