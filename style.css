@@ -1,0 +1,350 @@
+* {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+  font-family: "IntroCaps";
+  font-style: normal;
+  font-weight: 400;
+  src: local("./fonts/Intro-caps/IntroDemoBlackCaps.otf");
+}
+
+body {
+  width: 100%;
+  height: 250vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 5rem 2fr 4fr 8fr 2fr 3fr;
+  grid-template-areas: "navbar navbar navbar" "hero hero hero" "desc desc desc" "review review review" "subs subs subs" "foot foot foot";
+  background: #000;
+  color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+body header {
+  grid-area: navbar;
+  position: relative;
+  display: flex;
+  padding: 0 4rem;
+  justify-content: space-between;
+  z-index: 10;
+  background: #1f1f1f;
+}
+
+body header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header .logo img {
+  margin: auto;
+}
+
+body header .desktop-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header .desktop-navbar ul {
+  display: flex;
+}
+
+body header .desktop-navbar ul li {
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 0px;
+  margin: 0px 30px;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
+  width: fit-content;
+}
+
+body header .desktop-navbar ul li a {
+  text-decoration: none;
+  color: #222222;
+}
+
+body header .desktop-navbar ul li:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+body header .desktop-navbar ul li::before {
+  transition: 300ms;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+}
+
+body header .desktop-navbar ul .ltr::before {
+  width: 0%;
+  bottom: 15px;
+}
+
+body header .desktop-navbar ul .ltr:hover::before {
+  width: 100%;
+}
+
+body header .outliers {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+}
+
+body header .outliers img {
+  width: 20px;
+  padding: 0 0.5rem;
+  height: 20px;
+}
+
+body main {
+  width: 100%;
+  height: 100%;
+}
+
+body main .hero {
+  display: flex;
+  flex-direction: column;
+  grid-area: hero;
+  background: linear-gradient(#fb4765, #4e0c1d);
+  width: 100vw;
+  height: 35%;
+  padding-top: 1rem;
+}
+
+body main .hero .images {
+  display: flex;
+  position: relative;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+
+body main .hero .images .lthumb {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .hero .images .lthumb .thumbnail {
+  padding: 1rem;
+}
+
+body main .hero .images .lthumb .thumbnail img {
+  width: 275px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+body main .hero .images .hero-image {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .hero .images .hero-image img {
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+body main .hero .images .rthumb {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body main .hero .images .rthumb .thumbnail {
+  padding: 1rem;
+}
+
+body main .hero .images .rthumb .thumbnail img {
+  width: 275px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+body main .hero .arrow-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0rem;
+}
+
+body main .hero .arrow-section .arrow {
+  position: relative;
+  margin: 0 2rem;
+  z-index: 15;
+}
+
+body main .hero .arrow-section #l-arrow {
+  transform: rotateY(180deg);
+}
+
+body main .description {
+  grid-area: desc;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(#4e0c1d, #000000);
+}
+
+body main .description .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+}
+
+body main .description .desc .title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "IntroCaps";
+  text-align: center;
+  margin: -0.5rem 0;
+}
+
+body main .description .desc .title img {
+  width: 25px;
+}
+
+body main .description .desc .title .active {
+  background: #f1f1f1;
+  border-radius: 50px;
+}
+
+body main .description .desc .content {
+  text-align: center;
+  padding: 0.5rem 9rem;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body main .description .desc .details {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+body main .description .desc .details span {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+body main .description .desc .buttons button {
+  border: none;
+  width: 150px;
+  padding: 1rem 0rem;
+  margin: 0 0.2rem;
+  border-radius: 5px;
+  background-color: #e53f5c;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+body main .description .desc .buttons .buy:hover {
+  box-shadow: 0 3px 5px rgba(229, 63, 92, 0.4);
+  transform: translateY(-2px);
+}
+
+body main .description .desc .buttons .cart {
+  border: 1px solid #e53f5c;
+  color: #e53f5c;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body main .description .desc .buttons .cart:hover {
+  background-color: #e53f5c;
+  color: #f1f1f1;
+}
+
+body main .reviews {
+  grid-area: review;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body main .reviews .review-header .customer-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+body main .reviews .review-cards-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+body main .reviews .review-cards-section .r-card {
+  display: flex;
+  width: 500px;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border: 2px dotted #e53f5c;
+  border-radius: 10px;
+}
+
+body main .reviews .review-cards-section .r-card .id-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+body main .reviews .review-cards-section .r-card .id-section .avatar img {
+  width: 75px;
+  border-radius: 50px;
+}
+
+body main .reviews .review-cards-section .r-card .id-section .name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+body main .reviews .review-cards-section .r-card .review {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+body main .sub {
+  grid-area: subs;
+}
+
+body footer {
+  grid-area: foot;
+  background: linear-gradient(#000000, #7d2131);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
