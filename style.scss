@@ -294,6 +294,19 @@ body {
           margin: 1rem 0;
           border: 2px dotted #e53f5c;
           border-radius: 10px;
+          &:nth-child(1) {
+            transform: translateX(-200px);
+          }
+          &:nth-child(2) {
+            transform: translateX(200px);
+            flex-direction: row-reverse;
+            .review {
+              text-align: right;
+            }
+          }
+          &:nth-child(3) {
+            transform: translateX(-200px);
+          }
           .id-section {
             display: flex;
             flex-direction: column;
@@ -313,7 +326,7 @@ body {
           }
           .review {
             padding-left: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
           }
@@ -323,6 +336,30 @@ body {
 
     .sub {
       grid-area: subs;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 5rem 0;
+      margin-bottom: 0;
+
+      .newsletter {
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 2rem;
+      }
+      .sub-button {
+        button {
+          border: none;
+          padding: 1rem 4rem;
+          background: #e53f5c;
+          color: #f1f1f1;
+          font-size: 1.2rem;
+          font-weight: 700;
+          border-radius: 50px;
+        }
+      }
     }
   }
 
@@ -333,5 +370,56 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+
+    .wrapper {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      .social {
+        display: flex;
+        flex-direction: column;
+
+        .facebook {
+          padding: 0.5rem;
+          img {
+            width: 15px;
+          }
+        }
+
+        .insta {
+          padding: 0.5rem;
+          img {
+            width: 18px;
+          }
+        }
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+
+        .cc {
+          padding: 0.5rem;
+          img {
+            width: 15px;
+          }
+        }
+        .mobile {
+          padding: 0.5rem;
+          img {
+            width: 15px;
+          }
+        }
+      }
+    }
+
+    .foot {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
   }
 }
